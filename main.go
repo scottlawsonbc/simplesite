@@ -53,7 +53,7 @@ func seed() {
 // Execute query and return a list of places. Panic if error.
 func query(q string) []place {
 	places := []place{}
-	rows, err := db.Queryx("SELECT * FROM place")
+	rows, err := db.Queryx(q)
 	check(err)
 	for rows.Next() {
 		var p place
